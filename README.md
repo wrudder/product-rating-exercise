@@ -22,17 +22,17 @@ The initial api consists of just two operations:
 
 ## The problem
 
-Please implement the following changes and additions to the API and the necessary controllers, models, database schemas, etc:
+Please create two new endpoints:
 
-- `POST /product/:id/review`: create a product review with the following properties:
-  - `author`: string, required, the name of the author of the review
-  - `star_rating`: integer between 1 and 5 inclusive, required
-  - `headline`: string between 5 and 50 characters long, required, the review headline
-  - `body`: string up to 1000 characters long, options, the body of the review
-- `GET /product/:id/reviews`: list reviews for a product, with the following optional parameters:
-  - `by=stars|date` - sort by the star rating or by date
-  - `order=asc|desc` - sort in ascending or descending order
-  - the default sort order should be by date descending (most recent review first)
+1. Create a review for a given product that has the following properties:
+   - The author of the review, requied.
+   - Star rating between 1 and 5 (inclusive), required.
+   - The headline text of the review, required.
+   - The body text.
+2. List all reviews for a given product, with the following parameters:
+   - Sort by either star rating or date, optional.
+   - Sort in ascending or descending order, optional.
+   - The default sort order should be by date descending (i.e., most recent review first).
 
 Also, please modify the `GET /product` call, used to return all products, to return the most highly rated products first.
 
