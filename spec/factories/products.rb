@@ -14,6 +14,9 @@
 #
 #  index_products_on_name  (name) UNIQUE
 #
-
-class Product < ApplicationRecord
+FactoryBot.define do
+  factory :product do
+    description { Faker::Quote.yoda }
+    name { Faker::Commerce.product_name }
+  end
 end

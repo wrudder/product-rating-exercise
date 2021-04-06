@@ -8,10 +8,17 @@ This repository provides a starting point for a Ruby on Rails implementation.  Y
 
 To start working on this codebase, do the following:
 
-1. Ensure that you have an up-to-date installation of Docker.
-2. `$ docker-compose build`
-3. `$ docker-compose run --rm api rake db:create db:migrate db:seed`
-4. `$ docker-compose up`
+1. Ensure you have Ruby v2.7.3 installed.
+  * We recommend using RVM for managing Ruby versions: https://rvm.io/
+2. Ensure that you have an up-to-date installation of Docker.
+  * You can download Docker here: https://docs.docker.com/get-docker/
+3. `$ docker-compose build`
+4. `$ docker-compose run --rm api rake db:create db:migrate db:seed`
+5. `$ docker-compose up`
+
+To run the test suite, do the following:
+
+1. `$ docker-compose run --rm api bundle exec rspec`
 
 You should now be able to list products at http://localhost:3000/product
 

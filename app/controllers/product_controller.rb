@@ -1,10 +1,21 @@
+# frozen_string_literal: true
+
 class ProductController < ApplicationController
   def index
     @products = Product.all
-    json_response(@products)
+
+    render json: @products, status: :ok
   end
 
   def show
-    json_response(Product.find(params[:id]))
+    @product = Product.find(show_params[:id])
+
+    render json: @product, status: :ok
+  end
+
+  private
+
+  def show_params
+    params.permit(:id)
   end
 end
