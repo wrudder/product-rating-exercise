@@ -26,7 +26,7 @@ class ReviewController < ApplicationController
     def show
       @review = Review.find(show_review_params[:id])
   
-      render json: @review, status: :ok
+      render json: @review, status: :ok 
     end
   
     private

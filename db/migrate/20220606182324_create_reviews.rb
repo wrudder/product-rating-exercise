@@ -5,7 +5,7 @@ class CreateReviews < ActiveRecord::Migration[6.1]
       t.string :title, null: false
       t.string :description, null: true
       t.integer :rating, null: false
-      t.uuid :product_id, null: false
+      t.uuid :product_id, null: false 
       t.timestamps
     end
   end

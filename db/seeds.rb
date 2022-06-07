@@ -9,7 +9,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 5.times do |i|
  product = Product.create(name: "product-#{i}", description: "Product #{i}")
- 3.times do |t|
+ 3.times do |t| 
    Review.create(author: "Will", title: "Book Review", product_id: product.id, rating: rand(1..5) )
  end
 end
