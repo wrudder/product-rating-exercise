@@ -4,7 +4,7 @@ class ReviewController < ApplicationController
 
     def index
       
-        #get all reviews with associated product id
+        #get all reviews with associated product (id)
       @reviews = Review.where(product_id: show_params[:product_id])
         #if there is no reviews render a error message
       unless @reviews.blank? 

@@ -12,6 +12,7 @@
 #  product_id  :uuid             not null
 #
 class Review < ApplicationRecord
+    
     has_one :product
     validates :title, length: { minimum: 2 }, presence: true
     validates :rating, :inclusion => { :in => 1..5 }, presence: true

@@ -3,7 +3,7 @@
 class ProductController < ApplicationController
   def index
        
-# note: i think a better way to do this would be to add a column to the product table "average_rating" - this could update everytime a review is submitted and would be far less expensive.
+# note: i think a better way to do this would be to add a column to the product table "average_rating" - this could update everytime a review is submitted and would be far less expensive...
 
    @products = Product.joins(
     "INNER JOIN (#{Review.select('product_id, AVG(rating) AS avg_rating').group('product_id').to_sql}) AS reviews ON reviews.product_id = products.id"
